@@ -1,0 +1,169 @@
+/* Global variables */
+:root{
+--c-grey-green1: hsl(144, 25%, 92%);
+}
+
+html {
+	font-size: 100%;
+}
+
+
+*,
+::after
+::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Epilogue', sans-serif;
+	background: var(--c-grey-green1);
+
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1, h2 {
+	text-transform: capitalize;
+}
+h1{
+	font-size: 4rem;
+}
+
+h2{
+	font-size: 2.5rem;
+}
+h3{
+	font-size: 1.5rem;
+}
+
+/* NAVBAR */
+nav{
+	background:white;
+	/* box-shadow: green; */
+}
+.nav-header{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.nav-btn{
+	font-size: 1.5rem;
+	color: gray;
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+.nav-btn:hover{
+	color: purple;
+	/* transform: rotate(90deg); */
+	font-size: 2rem;
+}
+
+.logo{
+	height: 65px;
+}
+
+.menu a{
+	color: black;
+	font-size: 1rem;
+	text-transform: capitalize;
+	display: block;
+	padding: 0.5rem 1rem;
+}
+
+.menu a:hover{
+	background: blue;
+	color: yellow;
+	padding-left: 1.5rem;
+}
+/* icons not shown on smaller screens */
+.icons{
+	display: none;
+}
+
+.menu{
+	height:0;
+	overflow: hidden;
+}
+/* toggle class to be added in JS to show menu on click*/
+.show-menu{
+	height: 10rem;
+}
+
+@media only screen and (min-width: 768px){
+	.nav-center{
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+	.nav-header{
+		padding:0;
+	}
+	.nav-btn{
+		display: none;
+	}
+	.menu{
+		height:auto;
+		display: flex;
+	}
+	.menu a{
+		padding: 0;
+		margin: 0 0.5rem;
+	}
+	.menu a:hover{
+		padding: 0;
+		background: transparent;
+	}
+	.icons{
+		display: flex;
+	}
+	.icons a{
+		margin: 0 0.5rem;
+		color: blue;
+	}
+	.icons a:hover{
+		color: green;
+	}
+}
+
+/* MAIN */
+.hero{
+background-image: url("images/hero.JPG");
+background-size: cover;
+height: 40vw;
+}
+
+.hero-recipes{
+	background-image: url("images/hero-recipes.JPG");
+	background-size: cover;
+	height: 40vw;
+	background-position: bottom;
+}
+
+#top-title{
+	text-transform: capitalize;
+}
+.prev-btn{
+transition: all 1s linear;
+}
+
+.animate{
+	animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
