@@ -1,6 +1,13 @@
 /* Global variables */
 :root{
---c-grey-green1: hsl(144, 25%, 92%);
+--c-grey-green1: hsl(173, 30%, 95%);
+--c-grey-lightest: hsl(208, 4%, 97%);
+--c-grey-mid: hsl(127, 0%, 49%);
+--c-grey-light: hsl(127, 0%, 70%);
+--c-green-lightest: hsl(127, 40%, 90%);
+--c-yellow-mid: hsl(52, 100%, 54%);
+--c-red-pink: hsl(344, 92%, 50%);
+
 }
 
 html {
@@ -18,7 +25,7 @@ html {
 
 body{
 	font-family: 'Epilogue', sans-serif;
-	background: var(--c-grey-green1);
+	background: var(--c-green-lightest);
 
 }
 
@@ -30,62 +37,87 @@ a{
 	text-decoration: none;
 }
 
-h1, h2 {
+h1 {
 	text-transform: capitalize;
 }
 h1{
-	font-size: 4rem;
+	font-size: 3.5rem;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	padding: 100px 10px 10px 60px;
 }
 
 h2{
 	font-size: 2.5rem;
+	margin-top: 0px;
+	padding: 10px 10px 100px 60px;
+}
+.title-box h2{
+		font-family: 'Mulish', sans-serif;
+		font-style: italic;
 }
 h3{
 	font-size: 1.5rem;
 }
 
+h4{
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
 /* NAVBAR */
 nav{
-	background:white;
+	background:var(--c-grey-lightest);
 	/* box-shadow: green; */
+	box-shadow: 0px 2px 3px 0px var(--c-grey-mid);
+	/* height:85px; */
 }
 .nav-header{
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem;
+	/* padding: 0.3rem; */
 }
+
 .nav-btn{
 	font-size: 1.5rem;
-	color: gray;
+	color: var(--c-grey-mid);
 	background: transparent;
 	border-color: transparent;
 	cursor: pointer;
 	transition: all 0.3s linear;
+	margin-right: 30px;
+	margin-top: 10px;
 }
 .nav-btn:hover{
-	color: purple;
-	/* transform: rotate(90deg); */
+	color: var(--c-red-pink);
 	font-size: 2rem;
 }
 
 .logo{
 	height: 65px;
+	padding: 15px 0 0 25px;
 }
 
 .menu a{
 	color: black;
 	font-size: 1rem;
-	text-transform: capitalize;
+	text-transform:uppercase;
+	font-family: 'Mulish', sans-serif;
 	display: block;
 	padding: 0.5rem 1rem;
 }
 
 .menu a:hover{
-	background: blue;
-	color: yellow;
+	background: var(--c-grey-green1);
+	color: var(--c-yellow-mid);
 	padding-left: 1.5rem;
 }
+
+.menu li{
+	padding: 0 1rem;
+}
+
 /* icons not shown on smaller screens */
 .icons{
 	display: none;
@@ -94,6 +126,7 @@ nav{
 .menu{
 	height:0;
 	overflow: hidden;
+
 }
 /* toggle class to be added in JS to show menu on click*/
 .show-menu{
@@ -107,13 +140,16 @@ nav{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1rem;
+		padding: 0.8rem;
 	}
 	.nav-header{
 		padding:0;
 	}
 	.nav-btn{
 		display: none;
+	}
+	.logo{
+		padding: 0;
 	}
 	.menu{
 		height:auto;
@@ -131,25 +167,72 @@ nav{
 		display: flex;
 	}
 	.icons a{
-		margin: 0 0.5rem;
-		color: blue;
+		margin: 0 0.8rem;
+		color: black;
 	}
 	.icons a:hover{
-		color: green;
+		color: var(--c-red-pink);
 	}
 }
 
 /* MAIN */
 .hero{
 background-image: url("images/hero.JPG");
-background-size: cover;
-height: 40vw;
+background-size:cover;
+height: 30vw;
+background-position:center;
+margin-top: 15px;
+padding-top: 60px;
+}
+.title-box{
+	background-color: hsla(148, 0%, 98%, 0.6);
+	width: 90%;
+	/* margin-left: 40px; */
+	margin: auto;
+	border-radius: 5px;
+
+}
+.introduction h3{
+	text-align: center;
+	padding: 20px;
+}
+.introduction a{
+	color: var(--c-red-pink);
+}
+.trending-recipes{
+	background-color: hsla(148, 0%, 98%, 0.6);
+		box-shadow: 5px 5px 10px 5px var(--c-grey-light);
+	width: 70%;
+	text-align: center;
+	border-radius: 5px;
+	margin: auto;
+	margin-bottom: 70px;
+	padding: 50px 50px;
+}
+.inner-container{
+	background-color: hsla(40, 100%, 54%, 0.2);
+	/* box-shadow: 0px 5px 5px 0px hsl(40, 100%, 54%); */
+	border-radius: 10px;
+	width: 65%;
+	margin: auto;
+	padding: 20px 80px;
+}
+
+.top-item p{
+	font-family: 'Mulish', sans-serif;
+	font-size: 1.1rem;
+}
+.top-item h3{
+		font-family: 'Mulish', sans-serif;
+		font-weight: bold;
 }
 
 .hero-recipes{
 	background-image: url("images/hero-recipes.JPG");
 	background-size: cover;
-	height: 40vw;
+	height: 30vw;
+	margin-top: 15px;
+	padding-top: 60px;
 	background-position: bottom;
 }
 
@@ -167,3 +250,72 @@ transition: all 1s linear;
 0% {opacity:0;}
 100% {opacity:1;}
 }
+
+.btn-trending button{
+	font-size: 3rem;
+	margin: 20px;
+	border: none;
+	background-color: transparent;
+}
+
+/*------------------------------------------------------ */
+/* CSS FOR MONTHLY.HTML */
+/* ----------------------------------------------------- */
+
+.monthly-recipes h2{
+	color: var(--c-red-pink);
+	text-align: center;
+	margin-top: 50px;
+	padding-bottom: 30px;
+}
+
+
+.recipe-section{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
+.each-recipe{
+	width: 20%;
+	padding: 30px;
+	text-align: center;
+	background-color: hsla(148, 0%, 100%, 0.6);
+			box-shadow: 5px 3px 10px 0px var(--c-grey-light);
+			border-radius: 5px;
+			margin: 40px 20px;
+			/* display: flex; */
+/* flex-direction: column; */
+
+/* justify-content: flex-start; */
+/* margin:0; */
+width: 300px;
+	flex-wrap: wrap;
+}
+.each-recipe h3, .each-recipe p{
+	font-family: 'Mulish', sans-serif;
+}
+.each-recipe h3{
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.btns-div{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+	margin-top: 0;
+	padding-top: 0;
+	}
+
+.btns-div button{
+	font-family: 'Epilogue', sans-serif;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	text-align: center;
+	width: 150px;
+	padding: 10px 25px;
+	margin: 0 10px;
+	}

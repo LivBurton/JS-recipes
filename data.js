@@ -1,7 +1,7 @@
 let recipes = [
 	{
 		name: "southern fried chicken burger and chips",
-		description: "Juicy Southern fried chicken burger with sweet pepper relish, mayonnaise, salad and coleslaw in a toasted sesame seed bun. Serve along with our moreish crispy and seasoned fries!",
+		description: "Southern fried chicken burger with sweet pepper relish, mayonnaise, salad and coleslaw in a toasted sesame seed bun. Served with seasoned fries.",
 		img: "images/chick-chips.JPG",
 		selection: "meat",
 		trending: "yes",
